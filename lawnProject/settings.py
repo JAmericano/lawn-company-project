@@ -119,3 +119,5 @@ STATIC_URL = 'static/'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
+
+LOGIN_REDIRECT_URL = '/dashboard/'
