@@ -1,9 +1,9 @@
 from django.urls import path
-from django.contrib.auth import views as auth_views # Add this
 from . import views
 
 urlpatterns = [
-    path('', auth_views.LoginView.as_view(template_name='lawnApp/login.html'), name='login'),
-    path('login/', auth_views.LoginView.as_view(template_name='lawnApp/login.html'), name='login'),
+    path('', views.dashboard, name='dashboard'),
     path('dashboard/', views.dashboard, name='dashboard'),
+    path('login/', views.login_view, name='login'),
+    path('pricing/', views.pricing, name='pricing'),
 ]

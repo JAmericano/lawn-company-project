@@ -1,8 +1,10 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-
-def home(request):
-    return HttpResponse("Welcome to our Lawn Company website!")
 
 def dashboard(request):
     return render(request, 'lawnApp/dashboard.html')
+
+def login_view(request):
+    return render(request, 'lawnApp/login.html')
+
+def pricing(request):
+    return render(request, 'lawnApp/price.html')
