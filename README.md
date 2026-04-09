@@ -38,3 +38,9 @@ As the company owner, I want to be able to create accounts so users can securely
 - [x] Create project repository and initial documentation.
 - [x] Configure Python 3.9 virtual environment.
 - [x] Establish basic Django project structure.
+
+### Sprint 2 Tasks
+
+- [ ] Create registration page
+- [ ] Establish pricing page
+- [ ] Create a calender
