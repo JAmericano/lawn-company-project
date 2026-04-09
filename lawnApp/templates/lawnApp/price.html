@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Lawn Company</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #dff6dd, #f4fff2);
+            color: #2c3e2f;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            color: #1f5c2e;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #4b6b50;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #1f5c2e;
+            font-size: 24px;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2e7d32;
+            margin: 15px 0;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .footer-buttons {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 10px;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .btn-dashboard {
+            background-color: #2e7d32;
+            color: white;
+        }
+
+        .btn-dashboard:hover {
+            background-color: #256528;
+        }
+
+        .btn-contact {
+            background-color: #f4b400;
+            color: black;
+        }
+
+        .btn-contact:hover {
+            background-color: #d89d00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Our Lawn Care Pricing</h1>
+            <p>Professional lawn and landscaping services to keep your property looking its best.</p>
+        </div>
+
+        <div class="services">
+            <div class="card">
+                <h2>Basic Lawn Mowing</h2>
+                <div class="price">$65</div>
+                <ul>
+                    <li>Mowing front and backyard</li>
+                    <li>Edging sidewalks and driveway</li>
+                    <li>Blowing grass clippings</li>
+                    <li>General clean finish</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Fertilization</h2>
+                <div class="price">$40</div>
+                <ul>
+                    <li>Seasonal fertilizer application</li>
+                    <li>Helps improve grass health</li>
+                    <li>Promotes greener growth</li>
+                    <li>Great for spring and summer</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Full Service Package</h2>
+                <div class="price">$120</div>
+                <ul>
+                    <li>Mowing and edging</li>
+                    <li>Blowing and cleanup</li>
+                    <li>Weed removal</li>
+                    <li>Basic yard touch-up</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Bush Trimming</h2>
+                <div class="price">$35+</div>
+                <ul>
+                    <li>Trim overgrown bushes</li>
+                    <li>Shape front landscape neatly</li>
+                    <li>Clean clippings afterward</li>
+                    <li>Price depends on size and amount</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Leaf Cleanup</h2>
+                <div class="price">$45+</div>
+                <ul>
+                    <li>Blow and gather leaves</li>
+                    <li>Clean flower beds</li>
+                    <li>Front and side yard cleanup</li>
+                    <li>Optional hauling available</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Sprinkler Check</h2>
+                <div class="price">$50+</div>
+                <ul>
+                    <li>Inspect sprinkler heads</li>
+                    <li>Adjust water direction</li>
+                    <li>Check for minor issues</li>
+                    <li>Helpful before summer season</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-buttons">
+            <a href="{% url 'dashboard' %}" class="btn btn-dashboard">Back to Dashboard</a>
+            <a href="#" class="btn btn-contact">Request a Quote</a>
+        </div>
+    </div>
+</body>
+</html>
