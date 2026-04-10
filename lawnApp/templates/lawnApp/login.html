@@ -12,11 +12,18 @@
                     <div class="card-body">
                         <h3 class="text-center mb-2">Welcome to Our Lawn Company</h3>
                         <p class="text-center text-muted mb-4">Please log in to continue</p>
+                        
                         <form method="post">
                             {% csrf_token %}
                             {{ form.as_p }}
                             <button type="submit" class="btn btn-success w-100">Login</button>
                         </form>
+                        
+                        <div class="mt-4 text-center border-top pt-3">
+                            <p class="mb-0 text-muted">Don't have an account?</p>
+                            <a href="{% url 'register' %}" class="btn btn-outline-secondary btn-sm mt-2">Create an Account</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
