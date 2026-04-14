@@ -20,3 +20,6 @@ def register(request):
     else:
         form = UserCreationForm()
     return render(request, 'lawnApp/register.html', {'form': form})
+
+def pricing(request):
+    return render(request, 'lawnApp/price.html')
