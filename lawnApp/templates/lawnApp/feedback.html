@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #dff6dd, #f4fff2);
+            text-align: center;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h2 {
+            color: #1f5c2e;
+        }
+
+        form {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        input, textarea {
+            width: 280px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1b5e20;
+        }
+
+        .reviews {
+            margin-top: 50px;
+        }
+
+        .reviews h3 {
+            color: #1f5c2e;
+            margin-bottom: 20px;
+        }
+
+        .review-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .stars {
+            color: gold;
+            font-size: 18px;
+        }
+
+        .name {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Leave Your Feedback</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <textarea name="message" placeholder="Your Feedback" required></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="reviews">
+        <h3>⭐ What Our Customers Say</h3>
+
+        <div class="review-container">
+            {% for review in reviews %}
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>{{ review.message }}</p>
+                    <div class="name">– {{ review.name }}</div>
+                </div>
+            {% empty %}
+                <p>No feedback yet. Be the first to leave a review.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
