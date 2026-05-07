@@ -42,4 +42,4 @@ Isaac Castillo
 ### Sprint 2 Tasks
 - [x] Create registration page
 - [x] Establish pricing page
-- [ ] Create a calender
+- [x] Create a calender

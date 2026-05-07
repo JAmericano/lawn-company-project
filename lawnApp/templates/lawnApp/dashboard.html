@@ -1,70 +1,79 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
     <title>Dashboard</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <style>
+        .info-card {
+            transition: transform 0.2s;
+            border: none;
+            border-radius: 20px; /* Slightly rounder for a modern look */
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Custom line height for better readability of longer text */
+        .description-text {
+            line-height: 1.8;
+        }
+    </style>
 </head>
-
-
 
 <body class="bg-light">
 
-
-
 <div class="container mt-5">
+    <h1 class="text-center mb-5 fw-bold text-dark">Welcome to Our Lawn Company</h1>
 
-    <h2 class="text-center mb-4">Welcome to Our Lawn Company</h2>
-
-
-
-    <div class="row text-center">
-
-
-
-        <div class="col-md-3">
-
-            <a href="{% url 'book' %}" class="btn btn-success w-100 mb-3">Book Appointment</a>
-
+    <div class="row text-center mb-5">
+        <div class="col-md-3 col-sm-6">
+            <a href="{% url 'book' %}" class="btn btn-success w-100 mb-3 py-3 shadow-sm fw-bold">Book Appointment</a>
         </div>
-
-
-
-        <div class="col-md-3">
-
-            <a href="{% url 'appointments' %}" class="btn btn-primary w-100 mb-3">View Appointments</a>
-
+        <div class="col-md-3 col-sm-6">
+            <a href="{% url 'appointments' %}" class="btn btn-primary w-100 mb-3 py-3 shadow-sm fw-bold">View Appointments</a>
         </div>
-
-
-
-        <div class="col-md-3">
-
-           <a href="{% url 'pricing' %}" class="btn btn-danger w-100 mb-3">Pricing</a>
-
+        <div class="col-md-3 col-sm-6">
+           <a href="{% url 'pricing' %}" class="btn btn-danger w-100 mb-3 py-3 shadow-sm fw-bold">Pricing</a>
         </div>
-
-
-
-        <div class="col-md-3">
-
-            <a href="{% url 'feedback' %}" class="btn btn-secondary w-100 mb-3">Feedback</a>
-
+        <div class="col-md-3 col-sm-6">
+            <a href="{% url 'feedback' %}" class="btn btn-secondary w-100 mb-3 py-3 shadow-sm fw-bold">Feedback</a>
         </div>
-
-
-
     </div>
 
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card p-5 shadow-sm info-card">
+                <h2 class="text-success fw-bold mb-4 border-bottom pb-3">About Our Project</h2>
+                
+                <div class="description-text">
+                    <p class="lead fs-4 text-dark mb-4">
+                        We are dedicated to revolutionizing lawn maintenance through a seamless digital experience. 
+                        Our mission is to bridge the gap between high-quality outdoor care and modern convenience.
+                    </p>
+                    
+                    <p class="fs-5 text-muted">
+                        This management system is more than just a scheduling tool—it is a comprehensive platform 
+                        designed to give homeowners total control over their outdoor spaces. From real-time 
+                        appointment tracking to transparent pricing models, we ensure that every mow is handled 
+                        with professional precision and technical efficiency.
+                    </p>
+
+                    <p class="fs-5 text-muted">
+                        By integrating advanced data management with user-friendly design, we allow you to 
+                        manage your lawn care budget and service history all in one place. Whether you are 
+                        looking for a one-time service or a recurring seasonal plan, our technology ensures 
+                        your lawn remains a point of pride for your home without the traditional scheduling headaches.
+                    </p>
+                </div>
+
+                <div class="mt-5 pt-4 border-top">
+                    <p class="text-center text-muted fst-italic">
+                        "Redefining residential landscaping, one lawn at a time."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-
-
 </body>
-
 </html>
-
