@@ -43,3 +43,8 @@ Isaac Castillo
 - [x] Create registration page
 - [x] Establish pricing page
 - [x] Create a calender
+
+### Sprint 3 Tasks
+- [x] Establish Appointing Page
+- [x] Polish and decorate the UI of the website
+- [x] Establish View Appointment page.
